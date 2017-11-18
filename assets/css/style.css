@@ -237,3 +237,98 @@ input[type=submit] {
   background: #4aaaa5;
   border: 0 none;
 }
+
+/*Media Queries*/
+
+@media screen and (max-width: 980px){
+.main-section {
+  width:43%;
+  margin:0% 5% 3% 10%;
+}
+.auth-image{
+  width:325px;
+  margin-bottom:10px
+}
+.sidebar{
+  float:left;
+  }
+ #logo{
+   margin-left:10%;
+
+  }
+ nav{
+   margin-right:10%;
+ }
+
+ @media screen and (max-width: 768px){
+ 
+#logo{
+  height:70px;
+  line-height:75px;
+  margin-left: 3%;
+  float:left;
+  
+}
+nav{
+  margin: 3% 0% 0% 0%;
+  font-size:15px;
+}
+.auth-image{
+  width:300px;
+ 
+}
+.main-section{
+  width: 95%;
+  margin: -25px 15px 10px 50px; 
+  
+  
+}
+p{
+  font-size:15px;
+  margin-bottom:5px;
+  }
+
+
+}
+.sidebar{
+  margin:30px 10px 35px 50px;
+  max-width:87%;
+  
+}
+}
+
+@media screen and (max-width: 640px){
+
+#masthead{
+  position:static;
+
+}
+
+#logo{
+  width:100%;
+  margin:auto;
+}
+
+nav{
+  position:unset;
+  float:none;
+  text-align:center;
+  word-spacing:105px;
+  height:110px ;
+  padding-top:75px;
+}
+
+#main-container{
+  padding-top:0%
+}
+  
+.auth-image{
+  width:95%;
+
+}
+.work{
+  width:95%;
+}
+}
+
+
