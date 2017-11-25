@@ -1,38 +1,161 @@
-<!doctype html>
-<html lang = "en-us">
-
-
-
+<html>
 <head>
+	<meta charset="UTF-8">
+	<title>Crystal Collector</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
 
-<link rel="stylesheet" type="text/css" href ="style.css">
-	
-	<title>Psychic Game</title>
+
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
 </head>
-
 <body>
+<body background="https://www.nationalgeographic.com/content/dam/science/photos/000/477/47789.ngsversion.1492453804863.adapt.1900.1.jpg">
 
 
-<div class="header">The Psychic Game</div>
+<div class="col-md-6" style="background-color: #17a2b8;
+	color:#f8f9fa;
+	height:100px;
+	width:225px;
+	font-size: 20px;
+	text-align: center;
+	margin: 5px;
+	padding: 25px 10px 20px 20px;
+	font-family: 'Press Start 2P', cursive;
+
+	">Crystal Collector</div>
+
+
+	<p style= "
+	color: #08ff40;
+	line-height: 2.0;"
+	>You will be given a random number at the start of the game.<br>There are four crystals below.<br> By clicking on a crystal you will add a specific amount of points to your total score.<br>You win the game by matching your total score to a random number.<br>The value of each crystal is hidden from you until you click on it.<br>Each time when the game starts, the game will change the values of each crystal.</p>
+
+<div class="row">
+  <div class="goal"  style="
+    background-color: green;
+    position: static;
+    float: left;
+    color: purple;
+    height: 100px;
+    width: 200px;
+    font-size: 15px;
+    text-align: top, left;
+    margin: 5px;
+    font-family: 'Press Start 2p', cursive;
+  "></div>
+  <div class="col-6 col-sm-2" style="
+    background-color: green;
+    position: static;
+    float: left;
+    color: purple;
+    height: 100px;
+    line-height: 2.5;
+    font-size: 12;
+    max-width: 135px;
+    margin: 5px;
+    font-family: 'Press Start 2p', cursive
+  ">Wins: Losses:</div>
+
+  <!-- Force next columns to break to new line at md breakpoint and up -->
+  <div class="w-100 d-none d-md-block"></div>
+
+  <div class="col-6 col-sm-4" style="
+  float:;
+  ">	
+
+
+<img src="assets\images\redcrystal.jpg" class="img-fluid" alt="redcrystal" style ="
+position: ;
+height: 100px;
+width: 75px;
+">
+<img src="assets\images\bluecrystal.jpg" class= "img-fluid" alt="bluecrystal" style ="
+position: ;
+height: 100px;
+width: 75px;
+">
+<img src="assets\images\greencrystal.jpg" class= "img-fluid" alt="greencrystal" style ="
+position: ;
+height: 100px;
+width: 75px;
+">
+<img src="assets\images\yellowcrystal.jpg" class= "
+img-fluid" alt="yellowcrystal.jpg" style ="
+position: ;
+height:100px;
+width: 75px;
+">
+
+
+ <div=" col-sm-4" style="
+    background-color: green;
+    position: static;
+    float: left;
+    color: purple;
+    height: 100px;
+    width: 200px;
+    font-size: 15px;
+    text-align: top, left;
+    margin: 5px;
+    font-family: 'Press Start 2p', cursive
+  ">Your total score is #0</div>
+</div>
 	
-	<div class="section">
-
-		<section>Guess what letter I am thinking of</section>
-
-	Wins:
-	Losses:
-	Guesses Left:
-	Your guesses so far:
+ 
 
 
 
+<script>
+ 
+
+$(document).ready(function() {
+
+var goalNumber = Math.floor(Math.random()*120+19);
+console.log("goalNumber" + Math.floor(Math.random()*120+19));
+
+var btnred = Math.floor(Math.random()*12+1);
+console.log("btnred"+ Math.floor(Math.random()*12+1));
+
+var btnblue = Math.floor(Math.random()*12+1);
+console.log("btnblue"+ Math.floor(Math.random()*12+1));
+
+var btngreen = Math.floor(Math.random()*12+1);
+console.log("btngreen"+ Math.floor(Math.random()*12+1));
+
+var btnyellow = Math.floor(Math.random()*12+1);
+console.log("btnyellow"+ Math.floor(Math.random()*12+1));
+
+var operation = 
+//var wins = 
+//var losses = 
+
+
+
+$(".btnred").on("click", function() {
+  $
+}
+
+
+  });
 
 
 
 
 
+
+
+
+
+
+
+
+
+</script>
+	
 
 
 
