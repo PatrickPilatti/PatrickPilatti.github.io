@@ -1,69 +1,87 @@
+//SETUP VARIABLES
+//==================================
+var topics = ['Black Bear','Grizzly Bear','Polar Bear'];
 
-function verify(){
+var authKey = "6eoLYRCXCyVIW45VGjPI4MaYIsVxa8jL";
 
-	var question1 = document.quiz.question1.value;
-	var question2 = document.quiz.question2.value;
-	var question3 = document.quiz.question3.value;
-	var correct = 0;
+//URL BASE
+//==================================
+var queryURL = "https://api.giphy.com/v1/gifs/search?q=" 
 
+// FUNCTIONS
+// ================================
 
-	if (question1 == "October, 2000") {
-
-		correct++;
-}
-	if (question2 == "2004") {
-		
-		correct++;
-}
-	if (question3 == "2005") {
-
-		correct++;
-}
-
-var messages = ["A winrar is u!", "Meh", "Very dishonuraburr!"];
-
-var images = ["assets/images/win.gif", "assets/images/meh.gif", "assets/images/lose.gif"];
-
-
-var score;
-
-	if (correct < 1) {
-		score = 2;
-	}
-
-	if (correct > 0 && correct < 3) {
-		score = 1;
-	}
-
-	if (correct > 2) {
-		score = 0;
-	}
-
-document.getElementById("after_submit").style.visibility = "visible";
-
-document.getElementById("messages").innerHTML = messages[score];
-
-document.getElementById("number_correct").innerHTML = "you got" + correct + "correct.";
-document.getElementById("images").src =images[score];
-};
-
-var total_seconds =60*1;
-
-var c_minutes = parseInt(total_seconds/60);
-
-var c_seconds = parseInt(total_seconds%60);
-function CheckTime(){
-
-	document.getElementById("quiz-time-left").innerHTML ='Time Left: '+ c_minutes + ' minutes ' + c_seconds + ' seconds' ;
-
-	if(total_seconds <=0){
-		setTimeout('document.quiz.submit()',1);
-	} else{
-		total_seconds = total_seconds -1;
-		c_minutes = parseInt(total_seconds/60);
-		c_seconds = parseInt(total_seconds%60);
-		setTimeout("CheckTime()",1000);
-	}}
-	setTimeout("CheckTime()", 1000);
-
+function renderButtons(){
+	var topics = $(this).attr("button");
 	
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q" + topics + "&api_key=6eoLYRCXCyVIW45VGjPI4MaYIsVxa8jL&q=&limit=10&offset=0&rating=PG&lang=en"; 
+ 
+
+         $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
+        	console.log(response);
+        
+
+    //    topics.forEach(function(topics) {
+    //   var listItem = $('<li>').text(topics);
+    //   $('ul').append(listItem);
+    // });
+
+	$('#buttons-view').empty(); {
+
+	for (var i = 0; i < topics.length; i++) {
+		var a = $("<button>");
+		a.addClass("topics");
+		a.attr("topic",topics[i]);
+		a.text(topics[i]);
+		$("#buttons-view").append(a)
+		renderButtons();
+		console.log(renderButtons);
+	}};
+
+
+
+
+	$('#addTopic').on("click",function(event) {
+		
+
+		var topics =$("#topic-input").val().trim();
+
+		topics.push(topic);
+
+		document.getElementById("topicButtons").innerHTML = topic[i];
+		
+	});
+		function displayTopics() {
+
+        var topics = $(this).attr("topic");
+         
+         }
+
+      $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
+        	event.preventDefault();
+        var topicsDiv = $("<div class= 'topic'>");
+        var rating =response.Rated;
+
+        var pOne = $('<p>').text("Rating:" + rating);
+
+        topicsDiv.append(pOne);
+
+        var imgURL = response.url;
+
+        var image = $("<img>").attr("src", imgURl);
+
+        topicsDiv.append(image);
+    })
+
+   });
+
+  
+
+
+
