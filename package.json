@@ -1,28 +1,26 @@
 {
-  "name": "nodehangman",
+  "name": "burger",
   "version": "1.0.0",
-  "description": "This is a hangman game for node. Week 11 HW.",
-  "main": "letter.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PatrickPilatti/NodeHangman.git"
+    "url": "git+https://github.com/PatrickPilatti/burger.git"
   },
-  "keywords": [
-    "hangman",
-    "node"
-  ],
-  "author": "Patrick Pilatti",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PatrickPilatti/NodeHangman/issues"
+    "url": "https://github.com/PatrickPilatti/burger/issues"
   },
-  "homepage": "https://github.com/PatrickPilatti/NodeHangman#readme",
+  "homepage": "https://github.com/PatrickPilatti/burger#readme",
   "dependencies": {
-    "inquirer": "^5.0.1",
-    "prompt": "^1.0.0"
-  },
-  "devDependencies": {}
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0"
+  }
 }

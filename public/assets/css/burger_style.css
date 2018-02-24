@@ -1,0 +1,20 @@
+* {
+	text-align: center;
+}
+body{
+	background-color: #5cb85c;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+}
+
+.jumbotron {
+	background-color: #cbdbb7;
+}
+.list-group-item {
+	background-color: #cbdbb7;
+}
+.panel-default{
+	    border-color: #333;
+}
